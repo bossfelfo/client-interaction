@@ -25,9 +25,11 @@ const CardTitle = ({ title, containerClass, icon, menuItems }: CardTitleProps) =
       {typeof title === 'string' ? <h4 className='header-title mb-0'>{title}</h4> : title}
       {menuItems && menuItems.length > 0 && (
         <Dropdown>
-          <Dropdown.Toggle as={Link} to='#' className='arrow-none card-drop'>
-            <i className={classNames(icon ? icon : 'mdi mdi-dots-vertical')} />
-          </Dropdown.Toggle>
+          {menuItems && (
+            <Dropdown.Toggle as={Link} to='#' className='arrow-none card-drop'>
+              <i className={classNames(icon ? icon : 'mdi mdi-dots-vertical')} />
+            </Dropdown.Toggle>
+          )}
           <Dropdown.Menu align='end'>
             {(menuItems || []).map((item, index) => {
               return (

@@ -1,2 +1,1 @@
-// export { InteractionChart as default } from './InteractionChart'
-export {}
+export { InteractionChart as default } from './InteractionChart'
